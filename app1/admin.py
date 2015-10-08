@@ -9,5 +9,16 @@ class StudentAdmin(admin.ModelAdmin):
 
     list_display = ('name','birthday','sex')
 
+
+
 admin.site.register(Student, StudentAdmin)
-# Register your models here.
+
+class TeacherAdmin(admin.ModelAdmin):
+    fields = [
+        'name', 'number','sex'
+    ]
+
+    list_display = ('name','number','sex')
+
+
+admin.site.register(Teacher, TeacherAdmin)
